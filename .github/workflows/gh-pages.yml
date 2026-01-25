@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
@@ -18,7 +18,7 @@ jobs:
         run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
 
       - name: Setup hugo config
-        uses: cuchi/jinja2-action@v1.2.2
+        uses: cuchi/jinja2-action@v1.3.0
         with:
           template: config.j2
           output_file: config.toml
@@ -29,7 +29,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.124.1"
+          hugo-version: "0.154.5"
           extended: true
 
       - name: Build

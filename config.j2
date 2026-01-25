@@ -1,7 +1,7 @@
 theme = "awesome-identity"
 enableGitInfo = true
 enableRobotsTXT = true
-disableKinds = ["taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 {%- set portrait = "/images/profile.jpg" %}
 {%- set firstname =  "Théo" %}
@@ -36,7 +36,7 @@ DefaultContentLanguage = "en"
   lastname = "{{lastname}}"
 {%- endset -%}
 
-[languages.en.profile]
+[languages.en.params.profile]
   {{ profileBase }}
   title = "SRE / DevOps"
   bio = """Site Reliability Engineer @ Swan.
@@ -46,7 +46,7 @@ DefaultContentLanguage = "en"
   I may spend hours improving my Homelab, creating IOT devices, working on various electronic projects and the automation of everything I can think of.
   """
 
-[languages.fr.profile]
+[languages.fr.params.profile]
   {{ profileBase }}
   title = "SRE / DevOps"
   bio = """Ingénieur DevOps à Swan.
