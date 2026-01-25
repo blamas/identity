@@ -21,11 +21,11 @@ DefaultContentLanguage = "en"
 
 [languages]
   [languages.en]
-    title = "{{firstname}} {{lastname}} - SRE / DevOps"
+    title = "{{firstname}} {{lastname}} - SRE"
     languageName = "English"
     weight = 1
   [languages.fr]
-    title = "{{firstname}} {{lastname}} - SRE / DevOps"
+    title = "{{firstname}} {{lastname}} - SRE"
     languageName = "French"
     weight = 2
 
@@ -38,22 +38,18 @@ DefaultContentLanguage = "en"
 
 [languages.en.params.profile]
   {{ profileBase }}
-  title = "SRE / DevOps"
-  bio = """Site Reliability Engineer @ Swan.
+  title = "Site Reliability Engineer @ Swan"
+  bio = """Focused on reliability, automation, cloud, and Kubernetes, with a strong drive to automate everything. I care a lot about network optimization, performance, and cost efficiency.
 
-  Technologies and OpenSource enthusiast, always in search of new ways to optimise and improve my workflows.
-
-  I may spend hours improving my Homelab, creating IOT devices, working on various electronic projects and the automation of everything I can think of.
+  I enjoy building homelabs, developing hardware, working with microcontrollers, and building solid IaC and observability foundations.
   """
 
 [languages.fr.params.profile]
   {{ profileBase }}
-  title = "SRE / DevOps"
-  bio = """Ingénieur DevOps à Swan.
+  title = "Ingénieur SRE @ Swan"
+  bio = """Orienté fiabilité, automatisation, cloud et Kubernetes, avec une vraie volonté d’automatiser tout ce qui peut l’être. J’accorde beaucoup d’importance à l’optimisation réseau, aux performances et aux coûts.
 
-  Passionné de nouvelles technologies et tout particulièrement de projets OpenSource, toujours à la recherche de nouvelles méthodes pour optimiser et améliorer mes workflows.
-  
-  Je peux passer des heures à améliorer mon Homelab, à créer des objets IOT, à travailler sur divers projets électroniques et à automatiser de tout ce qui me passe sous la main.
+  J’aime monter des homelabs, développer des projets hardware, travailler avec des microcontrôleurs, et poser de solides bases en IaC et observabilité.
             """
 
 ## Contacts Configurations
@@ -74,18 +70,26 @@ DefaultContentLanguage = "en"
 
 [[languages.fr.params.actions]]
   name = "Voir mon CV"
-  url = "https://docs.reyth.dev/cv.pdf"
+  url = "https://docs.reyth.dev/cv_fr.pdf"
 [[languages.fr.params.actions]]
   name = "Derniers projets"
   url = "{{lastestProjects}}"
 
 ## Meta Configurations (HTTP Meta tags & OpenGraph)
-[params.meta]
-  description = "DevOps Engineer at Swan"
-  keywords = "{{lastname}}, {{firstname}}"
+{% set metaBase -%}
+  keywords = "{{lastname}}, {{firstname}}, SRE, Site Reliability, Kubernetes"
   images = [
     "{{portrait}}"
   ]
+{%- endset -%}
+
+[languages.en.params.meta]
+  description = "Site Reliability Engineer at Swan"
+  {{ metaBase }}
+
+[languages.fr.params.meta]
+  description = "Ingénieur SRE chez Swan"
+  {{ metaBase }}
 
 ## Footer Configurations
 [params.footer]
