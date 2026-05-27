@@ -1,40 +1,59 @@
 {
-  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests",
-    ":dependencyDashboard",
-    ":semanticCommits",
-    ":automergeBranch",
+    'config:recommended',
+    'helpers:pinGitHubActionDigests',
+    ':dependencyDashboard',
+    ':semanticCommits',
+    ':automergeBranch',
   ],
-  schedule: ["at any time"],
-  "git-submodules": {
+  schedule: [
+    'at any time',
+  ],
+  'git-submodules': {
     enabled: true,
   },
   packageRules: [
     {
-      matchManagers: ["github-actions", "regex"],
+      matchManagers: [
+        'github-actions',
+        'custom.regex',
+      ],
       automerge: true,
-      automergeType: "branch",
-      matchUpdateTypes: ["minor", "patch", "digest"],
-      minimumReleaseAge: "3 days",
+      automergeType: 'branch',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'digest',
+      ],
+      minimumReleaseAge: '3 days',
       ignoreTests: true,
     },
     {
-      matchManagers: ["mise", "git-submodules"],
+      matchManagers: [
+        'mise',
+        'git-submodules',
+      ],
       automerge: true,
-      automergeType: "branch",
-      matchUpdateTypes: ["minor", "patch"],
+      automergeType: 'branch',
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+      ],
       ignoreTests: true,
     },
   ],
   customManagers: [
     {
-      customType: "regex",
-      fileMatch: ["^\\.github/workflows/[^/]+\\.ya?ml$"],
-      matchStrings: ["tool: zola@(?<currentValue>[^\\s]+)"],
-      depNameTemplate: "getzola/zola",
-      datasourceTemplate: "github-releases",
+      customType: 'regex',
+      managerFilePatterns: [
+        '/^\\.github/workflows/[^/]+\\.ya?ml$/',
+      ],
+      matchStrings: [
+        'tool: zola@(?<currentValue>[^\\s]+)',
+      ],
+      depNameTemplate: 'getzola/zola',
+      datasourceTemplate: 'github-releases',
     },
   ],
 }
