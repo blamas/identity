@@ -13,7 +13,7 @@
   },
   packageRules: [
     {
-      matchManagers: ["github-actions", "custom.regex"],
+      matchManagers: ["github-actions"],
       automerge: true,
       automergeType: "branch",
       matchUpdateTypes: ["minor", "patch", "digest"],
