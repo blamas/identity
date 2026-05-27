@@ -11,4 +11,30 @@
   "git-submodules": {
     enabled: true,
   },
+  packageRules: [
+    {
+      matchManagers: ["github-actions", "regex"],
+      automerge: true,
+      automergeType: "branch",
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      minimumReleaseAge: "3 days",
+      ignoreTests: true,
+    },
+    {
+      matchManagers: ["mise", "git-submodules"],
+      automerge: true,
+      automergeType: "branch",
+      matchUpdateTypes: ["minor", "patch"],
+      ignoreTests: true,
+    },
+  ],
+  customManagers: [
+    {
+      customType: "regex",
+      fileMatch: ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      matchStrings: ["tool: zola@(?<currentValue>[^\\s]+)"],
+      depNameTemplate: "getzola/zola",
+      datasourceTemplate: "github-releases",
+    },
+  ],
 }
