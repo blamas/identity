@@ -2,7 +2,7 @@
 title = "PGP"
 +++
 
-Because the state has no business reading your mail, and neither does your ISP, your employer, or the seventeen ad-tech companies that already know your shoe size, your political opinions, and that you cried the day you realized Big Brother wasn't a warning, it was a pitch deck.
+Because the state has no business reading your mail. Neither does your ISP, your employer or the seventeen ad-tech companies that already know your shoe size, your political opinions and that you cried the day you realized Big Brother wasn't a warning, it was a pitch deck.
 
 Encrypt by default. Privacy is not a crime... yet.
 
