@@ -1,0 +1,31 @@
+base_url = "https://www.reyth.dev"
+title = "Théo Rey"
+description = "Site Reliability Engineer"
+theme = "apollo"
+
+build_search_index = false
+generate_feeds = false
+compile_sass = true
+minify_html = true
+taxonomies = []
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+theme = "toggle"
+use_cdn = false
+toc = false
+fancy_code = false
+mathjax = false
+dynamic_note = false
+fediverse = false
+
+menu = [
+    { name = "/pgp", url = "/pgp", weight = 1 },
+]
+
+socials = []
+
+[extra.analytics]
+enabled = false
