@@ -13,7 +13,7 @@
   },
   packageRules: [
     {
-      matchManagers: ["github-actions", "regex"],
+      matchManagers: ["github-actions", "custom.regex"],
       automerge: true,
       automergeType: "branch",
       matchUpdateTypes: ["minor", "patch", "digest"],
@@ -21,17 +21,17 @@
       ignoreTests: true,
     },
     {
-      matchManagers: ["mise", "git-submodules"],
+      matchManagers: ["mise", "git-submodules", "custom.regex"],
       automerge: true,
       automergeType: "branch",
-      matchUpdateTypes: ["minor", "patch"],
+      matchUpdateTypes: ["patch"],
       ignoreTests: true,
     },
   ],
   customManagers: [
     {
       customType: "regex",
-      fileMatch: ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      managerFilePatterns: ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       matchStrings: ["tool: zola@(?<currentValue>[^\\s]+)"],
       depNameTemplate: "getzola/zola",
       datasourceTemplate: "github-releases",
