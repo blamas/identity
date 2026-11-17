@@ -1,3 +1,18 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+{% if current_url %}
+<link rel="canonical" href="{{ current_url }}" />
+<meta property="og:url" content="{{ current_url }}" />
+<meta property="og:type" content="{% if current_path == "/" %}profile{% else %}website{% endif %}" />
+{% if current_path == "/" %}
+<script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Person", "name": {{ config.title | json_encode | safe }}, "jobTitle": "Site Reliability Engineer", "url": {{ config.base_url | json_encode | safe }}, "sameAs": {{ config.extra.me | json_encode | safe }}}
+</script>
+{% endif %}
+{% endif %}
+<meta property="og:site_name" content="{{ config.title }}" />
+<meta name="twitter:card" content="summary" />
+{% for url in config.extra.me %}
+<link rel="me" href="{{ url }}" />
+{% endfor %}
 <meta name="rating" content="surveillance-free" />
 <meta name="data-broker" content="none. try harder." />

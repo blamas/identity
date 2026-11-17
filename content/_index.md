@@ -2,6 +2,8 @@
 title = ""
 +++
 
+<h1 class="sr-only">Théo Rey</h1>
+
 Site Reliability Engineer @ Swan · France
 
 Infrastructure is a craft. I build systems meant to last. Reliable, observable, efficient enough to justify their existence on the grid. Focused on Kubernetes, cloud, and automation, with a particular obsession for network optimization, cost efficiency, and making things work quietly in the background.
