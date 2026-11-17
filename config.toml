@@ -22,7 +22,7 @@ dynamic_note = false
 fediverse = false
 
 menu = [
-    { name = "/pgp", url = "/pgp/", weight = 1 },
+    { name = "/pgp", url = "@/pgp.md", weight = 1 },
 ]
 
 socials = []
