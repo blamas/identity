@@ -8,7 +8,7 @@ Site Reliability Engineer @ Swan · France
 
 Infrastructure is a craft. I build systems meant to last. Reliable, observable, efficient enough to justify their existence on the grid. Focused on Kubernetes, cloud, and automation, with a particular obsession for network optimization, cost efficiency, and making things work quietly in the background.
 
-When I'm not staring at dashboards, I'm building homelabs, flashing microcontrollers, climbing rocks. Because some problems are still solved with your hands and the mountain doesn't have a terms of service.
+When I'm not staring at dashboards, I'm building homelabs, flashing microcontrollers and climbing rocks. Because some problems are still solved with your hands, and the mountain has no terms of service.
 
 ## Links
 
@@ -20,6 +20,6 @@ When I'm not staring at dashboards, I'm building homelabs, flashing microcontrol
 
 ## Resume
 
-[English PDF](https://docs.reyth.dev/resume_en.pdf) / [HTML](https://docs.reyth.dev/resume_en.html) / [JSON](https://docs.reyth.dev/resume_en.json)
+<p>English: <a href="https://docs.reyth.dev/resume_en.pdf" hreflang="en" aria-label="English resume, PDF">PDF</a> · <a href="https://docs.reyth.dev/resume_en.html" hreflang="en" aria-label="English resume, HTML">HTML</a> · <a href="https://docs.reyth.dev/resume_en.json" hreflang="en" aria-label="English resume, JSON">JSON</a></p>
 
-[French PDF](https://docs.reyth.dev/resume_fr.pdf) / [HTML](https://docs.reyth.dev/resume_fr.html) / [JSON](https://docs.reyth.dev/resume_fr.json)
+<p>French: <a href="https://docs.reyth.dev/resume_fr.pdf" hreflang="fr" aria-label="French resume, PDF">PDF</a> · <a href="https://docs.reyth.dev/resume_fr.html" hreflang="fr" aria-label="French resume, HTML">HTML</a> · <a href="https://docs.reyth.dev/resume_fr.json" hreflang="fr" aria-label="French resume, JSON">JSON</a></p>
