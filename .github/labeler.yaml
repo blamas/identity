@@ -1,0 +1,24 @@
+---
+area/content:
+  - changed-files:
+      - any-glob-to-any-file:
+          - content/**/*
+          - static/**/*
+
+area/github:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**/*
+
+area/renovate:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .renovate/**/*
+          - .renovaterc.json5
+
+area/site:
+  - changed-files:
+      - any-glob-to-any-file:
+          - config.toml
+          - templates/**/*
+          - themes/**/*

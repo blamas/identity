@@ -1,0 +1,16 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Auto-merge minor, patch and digest updates once checks pass",
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      automerge: true,
+      automergeType: "pr",
+    },
+    {
+      description: "Never auto-merge the Apollo theme: a build that passes can still change how the site looks",
+      matchManagers: ["git-submodules"],
+      automerge: false,
+    },
+  ],
+}

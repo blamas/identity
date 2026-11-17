@@ -3,38 +3,20 @@
   extends: [
     "config:recommended",
     "helpers:pinGitHubActionDigests",
+    "github>blamas/identity//.renovate/autoMerge.json5",
+    "github>blamas/identity//.renovate/labels.json5",
+    "github>blamas/identity//.renovate/semanticCommits.json5",
     ":dependencyDashboard",
+    ":disableRateLimiting",
     ":semanticCommits",
-    ":automergeBranch",
   ],
+  dependencyDashboard: true,
+  dependencyDashboardTitle: "Renovate Dashboard 🤖",
   schedule: ["at any time"],
+  minimumReleaseAge: "3 days",
+  // No branch protection: Renovate checks the status itself before merging.
+  platformAutomerge: false,
   "git-submodules": {
     enabled: true,
   },
-  packageRules: [
-    {
-      matchManagers: ["github-actions"],
-      automerge: true,
-      automergeType: "branch",
-      matchUpdateTypes: ["minor", "patch", "digest"],
-      minimumReleaseAge: "3 days",
-      ignoreTests: true,
-    },
-    {
-      matchManagers: ["mise", "git-submodules", "custom.regex"],
-      automerge: true,
-      automergeType: "branch",
-      matchUpdateTypes: ["patch"],
-      ignoreTests: true,
-    },
-  ],
-  customManagers: [
-    {
-      customType: "regex",
-      managerFilePatterns: ["/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"],
-      matchStrings: ["tool: zola@(?<currentValue>[^\\s]+)"],
-      depNameTemplate: "getzola/zola",
-      datasourceTemplate: "github-releases",
-    },
-  ],
 }
