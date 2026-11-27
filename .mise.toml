@@ -1,6 +1,6 @@
 [tools]
 "aqua:casey/just" = "1.59.0"
-"aqua:evilmartians/lefthook" = "2.2.2"
+"aqua:evilmartians/lefthook" = "2.2.3"
 "aqua:getzola/zola" = "0.23.6"
 "aqua:gitleaks/gitleaks" = "8.30.1"
 "aqua:koalaman/shellcheck" = "0.11.0"
